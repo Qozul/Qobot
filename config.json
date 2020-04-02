@@ -1,0 +1,104 @@
+{
+    "cmdprefix": "!",
+    "commands": [
+        {
+            "name": "help",
+            "func": "CommandHelp",
+            "reqargc": 0,
+            "argval": [
+                {
+                    "casesensitive": false,
+                    "valid": "^-[A-Za-z]"
+                }
+            ],
+            "permissions": ["any"],
+            "description": "Displays all known commands. Include -v flag for detailed info."
+        },
+        {
+            "name": "terminate",
+            "func": "CommandTerminate",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner"],
+            "description": "Terminates the bot."
+        },
+        {
+            "name": "play",
+            "func": "CommandPlay",
+            "reqargc": 0,
+            "argval": [
+                {
+                    "casesensitive": true,
+                    "valid": "^(https:\/\/www.youtube.com\/)(watch|playlist)"
+                },
+                {
+                    "casesensitive": false,
+                    "valid": "^-[A-Za-z]"
+                }
+            ],
+            "permissions": ["owner", "dnd"],
+            "description": "The bot will join your voice channel (if it is not already in a channel) and play the music."
+        },
+        {
+            "name": "leave",
+            "func": "CommandLeave",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "The bot will leave the voice channel it is in."
+        },
+        {
+            "name": "stop",
+            "func": "CommandStop",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "The bot will stop playing audio and leave voice."
+        },
+        {
+            "name": "skip",
+            "func": "CommandSkip",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "Skip the song currently playing and play the next audio in the queue."
+        },
+        {
+            "name": "pause",
+            "func": "CommandPause",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "pauses the current song."
+        },
+        {
+            "name": "emptyq",
+            "func": "CommandEmptyQueue",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "Empties the music queue."
+        },
+        {
+            "name": "showq",
+            "func": "CommandShowQueue",
+            "reqargc": 0,
+            "argval": [],
+            "permissions": ["owner", "dnd"],
+            "description": "Show every song in the queue."
+        },
+        {
+            "name": "vol",
+            "func": "CommandVolume",
+            "reqargc": 1,
+            "argval": [
+                {
+                    "casesensitive": false,
+                    "valid": "^[0-9](\\.[0-9]+)?$"
+                }
+            ],
+            "permissions": ["owner", "dnd"],
+            "description": "Adjust the volume the bot is playing audio at."
+        }
+    ]
+}

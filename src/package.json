@@ -1,0 +1,15 @@
+{
+    "name": "qobot",
+    "version": "2.0.0",
+    "description": "Discord bot innit.",
+    "main": "../bot/Qobot.js",
+    "author": "Ralph Ridley",
+    "dependencies": {
+        "@typeit/discord": "^1.0.12",
+        "@types/node": "^13.9.3",
+        "@types/ws": "^7.2.3",
+        "discord.js": "^12.0.2",
+        "reflect-metadata": "^0.1.13",
+        "typescript": "^3.8.3"
+    }
+}
